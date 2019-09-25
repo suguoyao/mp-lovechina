@@ -47,6 +47,16 @@ Page({
     }
   },
   /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function(e) {
+    return {
+      title: '定制属于你的爱中头像',
+      imageUrl: '/images/70.png',
+      path: '/pages/index/index'
+    }
+  },
+  /**
    * 打开授权弹窗
    */
   showAuthModel() {
