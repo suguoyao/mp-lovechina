@@ -1,0 +1,46 @@
+/* 弹窗 */
+
+.dialog-body {
+  position: relative;
+  background-color: #fff;
+  padding: 40rpx;
+}
+
+.dialog-body .btn-close {
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  font-weight: bold;
+  font-size: 35rpx;
+}
+
+.dialog-body .success-icon {
+  width: 85rpx;
+  height: 85rpx;
+}
+
+.dialog-body .content {
+  margin-top: 33rpx;
+  font-size: 32rpx;
+  color: #333;
+  text-align: center;
+}
+
+.dialog-body .body-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30rpx;
+}
+
+.dialog-body .body-footer > .cu-btn {
+  width: 100%;
+  margin: 10rpx 0;
+}
+
+.dialog-body .footer-tips {
+  color: grey;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}

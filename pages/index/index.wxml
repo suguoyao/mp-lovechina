@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <image class="c70" src="/images/70.png"></image> -->
+  <!-- <view class="tips">庆祝阿中哥70周岁，生成阿中头像</view> -->
+  <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" class="s-btn" bindgetuserinfo="getUserInfo"> 点击登录为阿中哥庆生 </button> -->
+  <!-- <view wx:if="{{hasUserInfo}}"> -->
+  <view>
+    <canvas canvas-id="canvas" class="avatar-canvas"></canvas>
+    <view class="btn-group">
+      <button class="s-btn light" bindtap="changeImg">更改图片</button>
+      <button class="s-btn" bindtap="saveAvatar">保存头像</button>
+    </view>
+  </view>
+</view>
+
+<!-- 手机授权 -->
+<modal show="{{showAuth}}" width="540rpx" hide-btn="true" bindclose="closeAuthModel">
+  <view slot="content">登录后才能使用哦~</view>
+  <button slot="btns" class="s-btn bg-red round" style="width:100%;" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登录</button>
+</modal>

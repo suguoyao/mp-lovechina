@@ -1,0 +1,20 @@
+<view class="cu-modal {{show ? 'show' : ''}}">
+  <view class="cu-dialog" style="width: {{width}}">
+    <view class="dialog-body">
+      <view class="btn-close" bindtap="_close">
+        <text class="cuIcon-close"></text>
+      </view>
+      <view class="content">
+        <slot name="content"></slot>
+      </view>
+      <view class="body-footer">
+        <button wx:if="{{!hideBtn}}" class="cu-btn bg-red round" bindtap="_ok">{{okBtnText}}</button>
+        <button wx:if="{{!hideCancelBtn && !hideBtn}}" class="cu-btn line-red round" bindtap="_close">{{cancelBtnText}}</button>
+        <slot name="btns"></slot>
+      </view>
+      <view class="footer-tips">
+        <slot name="footer-tips"></slot>
+      </view>
+    </view>
+  </view>
+</view>

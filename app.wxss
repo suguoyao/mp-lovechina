@@ -1,0 +1,152 @@
+/**app.wxss**/
+@import 'icon.wxss';
+
+.container {
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.s-btn {
+  position: relative;
+  height: 36px;
+  top: 0;
+  padding: 20rpx 50rpx;
+  font-size: 32rpx;
+  text-align: center;
+  background-color: #ef4938;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 200px;
+  line-height: 1;
+  box-shadow: 0 6px 0 #b23231, 0 8px 3px rgba(0, 0, 0, 0.3);
+  transition: 0.2s all ease;
+  margin: 0 10rpx;
+  border: 1rpx solid #ef4938;
+}
+
+.s-btn.light {
+  background-color: #fff;
+  color: #ef4938;
+  box-shadow: 0 6px 0 #c74c4c, 0 8px 3px rgba(0, 0, 0, 0.3);
+}
+
+.s-btn.button-hover {
+  top: 5rpx;
+  background-color: #c74c4c;
+  color: #eee;
+  box-shadow: 0 2px 0 #b23231, 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.s-btn.light.button-hover {
+  top: 5rpx;
+  background-color: #eee;
+  color: #b23231;
+  box-shadow: 0 2px 0 #c74c4c, 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ==================
+         模态窗口
+ ==================== */
+
+.cu-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1110;
+  opacity: 0;
+  outline: 0;
+  text-align: center;
+  -ms-transform: scale(1.185);
+  transform: scale(1.185);
+  backface-visibility: hidden;
+  perspective: 2000rpx;
+  background: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease-in-out 0s;
+  pointer-events: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cu-modal::before {
+  content: "\200B";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.cu-modal.show {
+  opacity: 1;
+  transition-duration: 0.3s;
+  -ms-transform: scale(1);
+  transform: scale(1);
+  overflow-x: hidden;
+  /* overflow-y: auto; */
+  overflow-y: hidden;
+  pointer-events: auto;
+}
+
+.cu-dialog {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  width: 680rpx;
+  max-width: 100%;
+  background-color: #f8f8f8;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.cu-modal.bottom-modal::before {
+  vertical-align: bottom;
+}
+
+.cu-modal.bottom-modal .cu-dialog {
+  width: 100%;
+  border-radius: 0;
+}
+
+.cu-modal.bottom-modal {
+  margin-bottom: -1000rpx;
+}
+
+.cu-modal.bottom-modal.show {
+  margin-bottom: 0;
+}
+
+.cu-modal.drawer-modal {
+  transform: scale(1);
+  display: flex;
+}
+
+.cu-modal.drawer-modal .cu-dialog {
+  height: 100%;
+  min-width: 200rpx;
+  border-radius: 0;
+  margin: initial;
+  transition-duration: 0.3s;
+}
+
+.cu-modal.drawer-modal.justify-start .cu-dialog {
+  transform: translateX(-100%);
+}
+
+.cu-modal.drawer-modal.justify-end .cu-dialog {
+  transform: translateX(100%);
+}
+
+.cu-modal.drawer-modal.show .cu-dialog {
+  transform: translateX(0%);
+}
+
+.cu-modal .cu-dialog>.cu-bar:first-child .action {
+  min-width: 100rpx;
+  margin-right: 0;
+  min-height: 100rpx;
+}

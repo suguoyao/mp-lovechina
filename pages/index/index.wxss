@@ -1,0 +1,29 @@
+/**index.wxss**/
+
+.c70 {
+  width: 222px;
+  height: 200px;
+  margin-bottom: 20rpx;
+}
+
+.avatar-canvas {
+  width: 300px;
+  height: 300px;
+  background-color: #eee;
+  margin-bottom: 30rpx;
+}
+
+.btn-group {
+  padding: 20rpx 0;
+}
+
+.btn-group > button {
+  margin-bottom: 35rpx;
+}
+
+.tips {
+  margin-bottom: 50rpx;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
