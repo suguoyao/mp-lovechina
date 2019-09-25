@@ -102,8 +102,10 @@ Page({
       ctx.drawImage('/images/head-2.png', 0, 0, 300, 300);
       ctx.draw(true)
     } else {
+      let avatarUrl = this.data.userInfo.avatarUrl
+      avatarUrl = avatarUrl.replace('/132', '/0') // 换成高清头像
       wx.getImageInfo({
-        src: this.data.userInfo.avatarUrl,
+        src: avatarUrl,
         success(res) {
           console.log(res)
           ctx.drawImage(res.path, 0, 0, 300, 300);
